@@ -58,6 +58,9 @@ function App(imageContainer){
       $('[role="toggle-nsfw"]').hide();
     }
 
+    a.bindEvents();
+    a.loadImages();
+
   };
 
   a.bindEvents = function(){
@@ -201,17 +204,9 @@ function App(imageContainer){
 
 }
 
-
 $(document).ready(function(){
   'use strict';
 
   var app = new App($('.imagewrapper'));
-
-  $(window).scroll(function() {
-    var pos = $(window).scrollTop();
-    app.refreshScroll(pos);
-  });
-
-  app.loadImages();
 
 });
