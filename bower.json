@@ -1,0 +1,10 @@
+{
+  "name": "platypus",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.11.1",
+    "modernizr": "~2.8.2",
+    "fastclick": "~1.0.6",
+    "normalize-css": "~3.0.2"
+  }
+}

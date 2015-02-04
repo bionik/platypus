@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Platypus</title>
+    <meta name="description" content="Platypus">
+    <meta name="author" content="@b10nik">
+
+    <meta property="og:title" content="Platypus"/>
+    <meta property="og:site_name" content="Platypus"/>
+    <meta property="og:description" content="Endless stream of breathtaking imagery."/>
+
+    <meta name="viewport" content="width=1000">
+
+    <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+
+    <div style="display: none;"><a href="https://plus.google.com/107421988127882728534/?rel=author">Google</a></div>
+
+    <div id="container" class="ns">
+      <header>
+        <div class="center">
+          <nav>
+            <a href="/">platypus</a>
+            <a href="?nsfw" role="toggle-nsfw">nsfw</a>
+            <a href="?shuffle" class="toggle-shuffle">shuffle</a>
+          </nav>
+          <div class="search">
+            <input id="search" class="search" placeholder="search..." /><input type="submit"/>
+          </div>
+          <div class="social">
+            <div class="gplus">
+              <g:plusone size="small" href="http://platypus.fi/"></g:plusone>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="imagewrapper" role="main"></div>
+    </div>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-22463452-1');ga('send','pageview');
+    </script>
+
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
+  </body>
+</html>

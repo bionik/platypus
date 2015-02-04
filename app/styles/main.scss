@@ -1,0 +1,228 @@
+// bower:scss
+// endbower
+
+html, body, .container {
+  height: 100%;
+}
+
+body * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #101010;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+header {
+  backface-visibility:hidden;
+
+  font-family: 'Open Sans Condensed', Helvetica, Arial, sans-serif;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.2), 0px -1px 4px rgba(255,255,255,0.4);
+
+  z-index: 1000;
+
+  height: 45px;
+  width: 100%;
+
+  background: rgba(25,25,25,0.8);
+
+  box-shadow: 0px 1px 15px #000;
+
+  font-size: 20px;
+  letter-spacing: 0.06em;
+
+  .center {
+    @extend .cf;
+
+    color: #505050;
+
+    position: relative;
+
+    top: 8px;
+
+    width: 980px;
+    margin: 0 auto;
+
+    nav, .search {
+      @extend .bs;
+
+      float: left;
+      margin-right: 10px;
+
+      input[type="submit"] {
+        display: none;
+      }
+    }
+
+    input.search {
+      margin-left: 10px;
+      border-radius: 45px 45px;
+      border: none;
+      background: rgba(0,0,0,0.2);
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.5), 0 1px 2px rgba(255,255,255,0.4);
+      font-size: 15px;
+      padding: 3px 10px;
+      padding-bottom: 5px;
+      color: #808080;
+      text-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+      position: relative;
+
+      font-family: Helvetica, Arial, sans-serif;
+
+    }
+
+    input.search:focus {
+      outline:none;
+    }
+
+    .social {
+      @extend .bs;
+      padding-top: 2px;
+      float: right;
+    }
+
+  }
+
+  a {
+    color: #e0e0e0;
+    text-decoration: none;
+    padding-left: 2px;
+    padding-right: 3px;
+  }
+
+  a:before {
+    display: inline-block;
+    content: '|';
+    position: relative;
+    left: -12px;
+    padding-left: 15px;
+    color: #303030;
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.4);
+  }
+
+  a:first-child {
+    padding-left: 10px;
+  }
+
+  a:first-child:before {
+    display: none;
+  }
+}
+
+.imagewrapper {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 45px;
+
+  .image {
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    img {
+      display: block;
+      float: left;
+      outline: 0;
+      border: 0;
+    }
+
+    .shadow {
+      float: left;
+      padding-right: 75px;
+      background: transparent url("../img/ui/shadow.png") repeat-y 100% 0;
+      height: 100%;
+    }
+
+    .tags {
+      opacity: 0;
+
+      backface-visibility:hidden;
+      -webkit-backface-visibility:hidden;
+
+      position: absolute;
+      right: -1000px;
+      top: 10px;
+      background: rgba(0,0,0,0.5);
+
+      border-left: 10px solid #000;
+
+      color: #f0f0f0;
+
+      padding: 8px 12px;
+      font-size: 14px;
+
+      text-shadow: 0px 1px 1px rgba(0,0,0,0.3), 0px -1px 2px rgba(255,255,255,0.1);
+      box-shadow: inset 3px 0 50px rgba(0,0,0,0.5);
+
+      input {
+        border: none;
+        background: transparent;
+        color: #ffffff;
+        padding: 0;
+        margin: 0;
+        outline: 0;
+      }
+
+    }
+
+    .tags.changed {
+      border-left: 10px solid #a41e1e;
+    }
+
+    .tags.saved {
+      border-left: 10px solid #82ae36;
+    }
+
+  }
+
+  .image:hover .tags {
+    animation-name: 'slide';
+    animation-duration: 0.2s;
+    transform-origin: 50% 50%;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+
+}
+
+@-keyframes slide {
+  0%   { transform: translate(0px, 0px); }
+  100% { transform: translate(-998px, 0px); opacity: 1; }
+}
+
+/* Padding does not change block dimensions with this class. No need for wrappers */
+.bs {
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -icab-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* No select hilight */
+.ns {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */
+.cf:before, .cf:after { content: ""; display: table; }
+.cf:after { clear: both; }
+.cf { zoom: 1; }
